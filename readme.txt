@@ -24,6 +24,8 @@ $ git diff readme.txt
 
 历史记录 如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数：
 $ git log --pretty=oneline
+分支合并图
+git log --graph --pretty=oneline --abbrev-commit
 
 版本回滚 上一个版本就是HEAD^，上上一个版本就是HEAD^^，HEAD~100。
 $ git reset --hard HEAD^
@@ -64,8 +66,24 @@ $ git checkout zn
 查看分支
 $ git branch
 
-合并某分支到master
-$ git merge zn
+合并某分支到当前分支,--no-ff，禁用“Fast forward”合并模式
+$ git merge --no-ff -m "注释内容" zn
 
 删除分支
 $ git branch -d zn
+强行删除分支
+$ git branch -D <name>
+
+把当前工作现场“储藏”起来
+$ git stash
+恢复工作现场，stash内容并不删除
+$ git stash apply
+删除stash内容
+$ git stash drop
+恢复工作现场并删除stash内容
+$ git stash pop
+查看工作现场
+$ git stash list
+
+查看远程库，-v 显示更详细信息
+$ git remote -v
