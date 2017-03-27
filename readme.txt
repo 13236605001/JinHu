@@ -49,6 +49,16 @@ $ git checkout -- test.txt
 
 github远程仓库连接
 $ git remote add origin git@github.com:13236605001/JinHu.git
-本地仓库同步远程仓库
+本地仓库同步远程仓库, -u 本地的master分支和远程的master分支关联
 $ git push -u origin master
+$ git push origin master
 
+从githun上面clone到本地
+$ git clone git@github.com:13236605001/JinHu.git
+
+创建分支，指向分支
+$ git checkout -b zn
+$ git checkout zn
+
+查看当前分支
+$ git branch
