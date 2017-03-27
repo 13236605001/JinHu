@@ -56,9 +56,16 @@ $ git push origin master
 从githun上面clone到本地
 $ git clone git@github.com:13236605001/JinHu.git
 
-创建分支，指向分支
-$ git checkout -b zn
+创建分支
+$ git checkout -b zn   或   $ git branch zn
+指向分支
 $ git checkout zn
 
-查看当前分支
+查看分支
 $ git branch
+
+合并某分支到master
+$ git merge zn
+
+删除分支
+$ git branch -d zn
