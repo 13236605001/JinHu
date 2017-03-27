@@ -21,3 +21,34 @@ $ git status
 
 比较差异
 $ git diff readme.txt
+
+历史记录 如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数：
+$ git log --pretty=oneline
+
+版本回滚 上一个版本就是HEAD^，上上一个版本就是HEAD^^，HEAD~100。
+$ git reset --hard HEAD^
+回退最新版本
+$ git reset HEAD readme.txt
+
+查看文件内容
+$ cat readme.txt
+
+查看命令历史
+$ git reflog
+
+删除文件，等同文件夹直接删除
+$ rm 文件名
+
+版本库中删除该文件
+$ git rm 文件名
+rm '文件名'
+$ git commit -m "remove 文件名"
+
+版本库里的版本替换工作区的版本
+$ git checkout -- test.txt
+
+github远程仓库连接
+$ git remote add origin git@github.com:13236605001/JinHu.git
+本地仓库同步远程仓库
+$ git push -u origin master
+
