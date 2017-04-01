@@ -87,3 +87,9 @@ $ git stash list
 
 查看远程库，-v 显示更详细信息
 $ git remote -v
+
+创建远程origin的dev分支到本地
+$ git checkout -b dev origin/dev
+
+把最新的提交从origin/dev抓下来
+$ git pull
